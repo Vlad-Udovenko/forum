@@ -3,7 +3,6 @@ import Info from '../../../Info/Info'
 
 
 let Comment = (props)=>{
-  console.log(props.comment)
   if(props.comment){ 
     return(
         <div>
