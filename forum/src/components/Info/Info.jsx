@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import { useHttp } from '../../hooks/http.hook';
 
 import {AuthContext} from './../../context/AuthContext'
+import Loader from '../Loader/Loader';
 
 
 
@@ -15,7 +16,7 @@ let Info = (props)=>{
 
     const getTheme = useCallback(async ()=>{
       try{
-        const data =  await request(`/api/auth/user/${props.name}`, 'Get', null,{
+        const data =  await request(`http://localhost:8000/api/auth/user/${props.name}`, 'Get', null,{
           Authorization: `Bearer ${token}`
         });
         setForm(data);

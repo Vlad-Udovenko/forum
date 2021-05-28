@@ -21,7 +21,7 @@ let RegistrationPage = (props)=>{
         let newForm = {
             ...form
         }    
-        axios.post(`/api/auth/register`, { ...newForm })
+        axios.post(`http://localhost:8000/api/auth/register`, { ...newForm })
           .then(res => {
             alert('registered!');
             history.push('/');

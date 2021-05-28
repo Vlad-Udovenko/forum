@@ -18,7 +18,7 @@ let ThemeList = (props)=>{
   const [themLength, setThemLength] = useState()
   const getList = useCallback(async()=>{
     try{
-      const list = await request(`/api/theme/?page=${page}&limit=${limit}`, 'GET', null, {Authorization: `Bearer ${token}`});
+      const list = await request(`http://localhost:8000/api/theme/?page=${page}&limit=${limit}`, 'GET', null, {Authorization: `Bearer ${token}`});
       setThemes(list);
       setThemLength(list.length);
     } catch (e){

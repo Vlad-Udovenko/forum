@@ -21,7 +21,7 @@ const changeHandler = event =>{
   const createTheme = async (event)=>{
     try {
       event.preventDefault();
-      const data = await request('/api/theme/generate', 'POST', {...form}, {Authorization: `Bearer ${auth.token}`});
+      const data = await request('http://localhost:8000/api/theme/generate', 'POST', {...form}, {Authorization: `Bearer ${auth.token}`});
       history.push(`/themePage/${data.theme._id}`);
     }
     catch(e){ event.preventDefault()}
