@@ -1,0 +1,6 @@
+{
+    "port": "8000",
+    "url" : "mongodb+srv://udaff1998:19982001@cluster0.q7wc5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret" : "Checked one",
+    "baseUrl": "http://localhost:8000"
+}
