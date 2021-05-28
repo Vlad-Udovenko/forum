@@ -29,7 +29,7 @@ const LoginPage = ()=>  {
     const signHandler = async (event) =>{
         try {
             event.preventDefault();
-            const data = await request ('http://localhost:8000/api/auth/login','POST',{...form})
+            const data = await request ('/api/auth/login','POST',{...form})
             auth.login(data.token, data.userId)
         } catch(e){}
     }

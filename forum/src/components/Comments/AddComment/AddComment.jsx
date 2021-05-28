@@ -22,7 +22,7 @@ const createComment =async (event)=>{
   try {
     form.userId = auth.userId;
     form.date = new Date();
-    await request(`http://localhost:8000/api/theme/${themeId}/addcomment`, 'PUT', {...form}, {Authorization: `Bearer ${auth.token}`});
+    await request(`/api/theme/${themeId}/addcomment`, 'PUT', {...form}, {Authorization: `Bearer ${auth.token}`});
     props.getTheme();
   }
   catch(e){ }

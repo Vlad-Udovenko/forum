@@ -16,7 +16,7 @@ let ThemePage = (props)=>{
 
     const getTheme = useCallback(async ()=>{
       try{
-        const data =  await request(`http://localhost:8000/api/theme/${themeId}`, 'Get', null,{
+        const data =  await request(`/api/theme/${themeId}`, 'Get', null,{
           Authorization: `Bearer ${token}`
         });
         setForm(data);

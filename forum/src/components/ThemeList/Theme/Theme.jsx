@@ -14,7 +14,7 @@ let Theme = (props)=>{
     const deleteTheme = useCallback (async (e, val)=>{
         try {
             e.preventDefault();
-            const data = await request(`http://localhost:8000/api/theme/${val}`, 'DELETE', null, {Authorization: `Bearer ${auth.token}`});
+            const data = await request(`/api/theme/${val}`, 'DELETE', null, {Authorization: `Bearer ${auth.token}`});
             debugger;
         }
           catch(e){ }
